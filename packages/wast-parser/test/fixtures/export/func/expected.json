@@ -1,0 +1,65 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "Func",
+      "name": {
+        "type": "Identifier",
+        "value": "func_0",
+        "raw": ""
+      },
+      "signature": {
+        "type": "Signature",
+        "params": [],
+        "results": [
+          "i32"
+        ]
+      },
+      "body": [
+        {
+          "type": "CallInstruction",
+          "id": "call",
+          "index": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "raw": "0"
+          }
+        }
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 2
+        },
+        "end": {
+          "line": 3,
+          "column": -1
+        }
+      }
+    },
+    {
+      "type": "Func",
+      "name": {
+        "type": "Identifier",
+        "value": "func_1",
+        "raw": ""
+      },
+      "signature": {
+        "type": "Signature",
+        "params": [],
+        "results": []
+      },
+      "body": [],
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 1
+        },
+        "end": {
+          "line": 5,
+          "column": 18
+        }
+      }
+    }
+  ]
+}

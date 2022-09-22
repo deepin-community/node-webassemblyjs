@@ -1,0 +1,56 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "Instr",
+      "id": "load",
+      "args": [
+        {
+          "type": "Instr",
+          "id": "const",
+          "args": [
+            {
+              "type": "NumberLiteral",
+              "value": 0,
+              "raw": "0"
+            }
+          ],
+          "object": "i32",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 33
+            },
+            "end": {
+              "line": 1,
+              "column": 43
+            }
+          }
+        }
+      ],
+      "object": "i64",
+      "namedArgs": {
+        "offset": {
+          "type": "NumberLiteral",
+          "value": 0,
+          "raw": "0x000"
+        },
+        "align": {
+          "type": "NumberLiteral",
+          "value": 1,
+          "raw": "1"
+        }
+      },
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 2
+        },
+        "end": {
+          "line": 1,
+          "column": 44
+        }
+      }
+    }
+  ]
+}

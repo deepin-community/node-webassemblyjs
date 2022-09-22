@@ -1,0 +1,108 @@
+node-webassemblyjs (1.11.1+dfsg+~cs10.10.21-1) unstable; urgency=medium
+
+  * Team upload
+  * Fix GitHub tags regex
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix filenamemangle
+  * Fix d/watch
+  * New upstream version 1.11.1+dfsg+~cs10.10.21
+  * Add patch to workaround jest-diff update (Closes: #997573)
+
+ -- Yadd <yadd@debian.org>  Sun, 24 Oct 2021 08:26:05 +0200
+
+node-webassemblyjs (1.11.0+dfsg+~cs10.10.16-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.5.1
+  * Add ctype=nodejs to component(s)
+  * New upstream version 1.11.0+dfsg+~cs10.10.16
+  * Enable part of upstream test
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 28 Jan 2021 17:19:23 +0100
+
+node-webassemblyjs (1.9.1+repack+~cs10.9.15-1) unstable; urgency=medium
+
+  * Team upload
+  * No more embed wabt (source unavailable) and repack. This will break
+    @webassemblyjs/wasm-parser and wast-loader (Closes: #975360)
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 21 Nov 2020 08:38:25 +0100
+
+node-webassemblyjs (1.9.1+dfsg+~cs11.9.35-1) unstable; urgency=medium
+
+  * Team upload
+  * Embed call-bind, get-intrinsic, requireindex, wabt and repack
+  * Update lintian overrides
+  * Require node-es-abstract ≥ 1.18.0
+  * Update copyright
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 20 Nov 2020 17:37:53 +0100
+
+node-webassemblyjs (1.9.1+dfsg+~cs7.7.13-1) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 13
+  * Use dh-sequence-nodejs
+  * Replace es-abstract component by dependency to new node-es-abstract
+  * New upstream version 1.9.1+dfsg+~cs7.7.13
+    Updates:
+     + webassemblyjs 1.9.1
+     + is-regex 1.1.1
+    Really: 1.9.1+~0.0.7+~4.2.2+~1.2.0+~1.1.1+~1.2.3
+  * Apply multi-arch hints
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 24 Oct 2020 08:39:38 +0200
+
+node-webassemblyjs (1.9.0+dfsg-4) unstable; urgency=medium
+
+  * Drop unnecessary build dependency on node-babel-plugin-add-module-exports
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 09 May 2020 17:38:26 +0530
+
+node-webassemblyjs (1.9.0+dfsg-3) unstable; urgency=medium
+
+  * Rename .babelrc.js to babel.config.js
+  * Build with babel7
+  * Drop patches that forced build with babel 6
+  * Use @babel/parser instead of babylon
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 05 May 2020 08:42:35 +0530
+
+node-webassemblyjs (1.9.0+dfsg-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix install
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 12 Mar 2020 22:24:09 +0100
+
+node-webassemblyjs (1.9.0+dfsg-1) unstable; urgency=medium
+
+  * Team Upload.
+
+  [ Nilesh Patra ]
+  * Embed components: is-regex, es-abstract,
+    is-callable, has-symbols, arrayprototypeflatmap
+  * Fix package to transition to unstable
+  * Fix copyright as per new embedded components
+  * Remove un-needed patch for embedded module
+  * Drop version check on nodejs, update Build-Depends
+  * Add "Rules-Requires-Root:no"
+  * Bump standards version to 4.5.0
+  * Bump compatibility level to 12
+  * Add Provides
+  * Add Patch Description
+  * Remove unused license Apache-2.0
+
+  [ Xavier Guimard ]
+  * Use ${nodejs:Provides} to publish all module installed in main nodejs
+    directories
+  * Fix perms and remove src from install
+  * New upstream version 1.9.0+dfsg
+
+ -- Nilesh Patra <npatra974@gmail.com>  Tue, 10 Mar 2020 17:44:16 +0530
+
+node-webassemblyjs (1.8.5+dfsg-1) experimental; urgency=low
+
+  * Initial release (Closes: #942455)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 18 Oct 2019 14:02:49 +0530

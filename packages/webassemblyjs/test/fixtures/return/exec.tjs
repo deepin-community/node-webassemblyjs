@@ -1,0 +1,8 @@
+it("should stop the interpretation and return the value", () => {
+  return WebAssembly.instantiate(wasmmodule).then(m => {
+    const res = m.instance.exports.test();
+
+    assert.notEqual(res, 2, "Interpration should have been stoped");
+    assert.equal(res, 1);
+  });
+});

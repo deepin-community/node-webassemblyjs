@@ -1,0 +1,319 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "Module",
+      "id": null,
+      "fields": [
+        {
+          "type": "Elem",
+          "table": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "raw": "0"
+          },
+          "offset": [
+            {
+              "type": "Instr",
+              "id": "const",
+              "args": [
+                {
+                  "type": "NumberLiteral",
+                  "value": 0,
+                  "raw": "0"
+                }
+              ],
+              "object": "i32",
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 9
+                },
+                "end": {
+                  "line": 2,
+                  "column": 19
+                }
+              }
+            }
+          ],
+          "funcs": [],
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 3
+            },
+            "end": {
+              "line": 2,
+              "column": 20
+            }
+          }
+        },
+        {
+          "type": "Elem",
+          "table": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "raw": "0"
+          },
+          "offset": [
+            {
+              "type": "Instr",
+              "id": "const",
+              "args": [
+                {
+                  "type": "NumberLiteral",
+                  "value": 0,
+                  "raw": "0"
+                }
+              ],
+              "object": "i32",
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 9
+                },
+                "end": {
+                  "line": 3,
+                  "column": 19
+                }
+              }
+            }
+          ],
+          "funcs": [
+            {
+              "type": "Identifier",
+              "value": "f"
+            }
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 3
+            },
+            "end": {
+              "line": 3,
+              "column": 23
+            }
+          }
+        },
+        {
+          "type": "Elem",
+          "table": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "raw": "0"
+          },
+          "offset": [
+            {
+              "type": "Instr",
+              "id": "const",
+              "args": [
+                {
+                  "type": "NumberLiteral",
+                  "value": 0,
+                  "raw": "0"
+                }
+              ],
+              "object": "i32",
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 17
+                },
+                "end": {
+                  "line": 5,
+                  "column": 27
+                }
+              }
+            }
+          ],
+          "funcs": [],
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 3
+            },
+            "end": {
+              "line": 5,
+              "column": 29
+            }
+          }
+        },
+        {
+          "type": "Elem",
+          "table": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "raw": "0"
+          },
+          "offset": [
+            {
+              "type": "Instr",
+              "id": "nop",
+              "args": [],
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 17
+                },
+                "end": {
+                  "line": 6,
+                  "column": 19
+                }
+              }
+            },
+            {
+              "type": "Instr",
+              "id": "const",
+              "args": [
+                {
+                  "type": "NumberLiteral",
+                  "value": 0,
+                  "raw": "0"
+                }
+              ],
+              "object": "i32",
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 23
+                },
+                "end": {
+                  "line": 6,
+                  "column": 33
+                }
+              }
+            }
+          ],
+          "funcs": [],
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 3
+            },
+            "end": {
+              "line": 6,
+              "column": 35
+            }
+          }
+        },
+        {
+          "type": "Elem",
+          "table": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "raw": "0"
+          },
+          "offset": [
+            {
+              "type": "Instr",
+              "id": "const",
+              "args": [
+                {
+                  "type": "NumberLiteral",
+                  "value": 1,
+                  "raw": "1"
+                }
+              ],
+              "object": "i32",
+              "loc": {
+                "start": {
+                  "line": 8,
+                  "column": 11
+                },
+                "end": {
+                  "line": 8,
+                  "column": 21
+                }
+              }
+            }
+          ],
+          "funcs": [
+            {
+              "type": "Identifier",
+              "value": "f"
+            },
+            {
+              "type": "Identifier",
+              "value": "g"
+            }
+          ],
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 3
+            },
+            "end": {
+              "line": 8,
+              "column": 28
+            }
+          }
+        },
+        {
+          "type": "Elem",
+          "table": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "raw": "0"
+          },
+          "offset": [
+            {
+              "type": "Instr",
+              "id": "const",
+              "args": [
+                {
+                  "type": "NumberLiteral",
+                  "value": 1,
+                  "raw": "1"
+                }
+              ],
+              "object": "i32",
+              "loc": {
+                "start": {
+                  "line": 9,
+                  "column": 11
+                },
+                "end": {
+                  "line": 9,
+                  "column": 21
+                }
+              }
+            }
+          ],
+          "funcs": [
+            {
+              "type": "NumberLiteral",
+              "value": 1,
+              "raw": "1"
+            },
+            {
+              "type": "NumberLiteral",
+              "value": 0,
+              "raw": "0"
+            }
+          ],
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 3
+            },
+            "end": {
+              "line": 9,
+              "column": 26
+            }
+          }
+        }
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 2
+        },
+        "end": {
+          "line": 10,
+          "column": -1
+        }
+      }
+    }
+  ]
+}

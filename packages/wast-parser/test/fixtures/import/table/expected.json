@@ -1,0 +1,62 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ModuleImport",
+      "module": "a",
+      "name": "b",
+      "descr": {
+        "type": "Table",
+        "elementType": "anyfunc",
+        "limits": {
+          "type": "Limit",
+          "min": 1
+        },
+        "name": {
+          "type": "Identifier",
+          "value": "table_0",
+          "raw": ""
+        }
+      },
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 2
+        },
+        "end": {
+          "line": 1,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": "ModuleImport",
+      "module": "c",
+      "name": "d",
+      "descr": {
+        "type": "Table",
+        "elementType": "anyfunc",
+        "limits": {
+          "type": "Limit",
+          "min": 5,
+          "max": 25
+        },
+        "name": {
+          "type": "Identifier",
+          "value": "table_1",
+          "raw": ""
+        }
+      },
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 1
+        },
+        "end": {
+          "line": 2,
+          "column": 35
+        }
+      }
+    }
+  ]
+}

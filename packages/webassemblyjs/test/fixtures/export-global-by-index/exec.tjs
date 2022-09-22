@@ -1,0 +1,6 @@
+it("should export the global value by index", () => {
+  return WebAssembly.instantiate(wasmmodule).then(m => {
+    assert.typeOf(m.instance.exports.a, "number");
+    assert.equal(m.instance.exports.a, 10);
+  });
+});

@@ -1,0 +1,6 @@
+use-babeljs-command.patch
+skip-prettier.patch
+dont-copy-libwabt.patch
+rename-babelrc.patch
+use-babel-parser.patch
+workaround-jest-diff-update.patch

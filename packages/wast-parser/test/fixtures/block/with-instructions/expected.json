@@ -1,0 +1,57 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "BlockInstruction",
+      "id": "block",
+      "label": {
+        "type": "Identifier",
+        "value": "block_0",
+        "raw": ""
+      },
+      "instr": [
+        {
+          "type": "Instr",
+          "id": "nop",
+          "args": [],
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 3
+            },
+            "end": {
+              "line": 2,
+              "column": 5
+            }
+          }
+        },
+        {
+          "type": "Instr",
+          "id": "nop",
+          "args": [],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 3
+            },
+            "end": {
+              "line": 3,
+              "column": 5
+            }
+          }
+        }
+      ],
+      "result": null,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 2
+        },
+        "end": {
+          "line": 4,
+          "column": -1
+        }
+      }
+    }
+  ]
+}

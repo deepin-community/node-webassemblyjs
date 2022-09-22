@@ -1,0 +1,11 @@
+if test "$AUTOPKGTEST_TMP" != ""; then
+	for package in `ls packages`; do
+		NAME=`jq -r .name "packages/$package/package.json"`
+		if [ -e packages/$package/lib ]; then
+			true
+		else
+			ln -vs /usr/share/nodejs/$NAME/lib packages/$package/lib
+		fi
+	done
+fi
+mocha `find packages/*/test -name '*.js'|grep -v -f debian/tests/tests_excluded`

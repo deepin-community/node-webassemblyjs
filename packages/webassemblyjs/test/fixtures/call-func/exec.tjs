@@ -1,0 +1,11 @@
+it("should call a function by its index", () => {
+  return WebAssembly.instantiate(wasmmodule).then(m => {
+    assert.equal(m.instance.exports.callByIndex(), 1);
+  });
+});
+
+it("should call a function by its name", () => {
+  return WebAssembly.instantiate(wasmmodule).then(m => {
+    assert.equal(m.instance.exports.callByName(), 1);
+  });
+});

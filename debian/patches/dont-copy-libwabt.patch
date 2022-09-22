@@ -1,0 +1,10 @@
+Description: Don't copy libwabt
+ Source is missing for this file, so removed from orig.tar
+--- a/scripts/build.sh
++++ b/scripts/build.sh
+@@ -36,5 +36,3 @@
+ done
+ 
+ wait
+-
+-cp -v packages/dce/src/libwabt.js packages/dce/lib/libwabt.js

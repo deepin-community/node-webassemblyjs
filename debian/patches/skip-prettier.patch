@@ -1,0 +1,11 @@
+Description: Skip prettier-command for build.
+--- a/scripts/generate-ast-utils.sh
++++ b/scripts/generate-ast-utils.sh
+@@ -5,5 +5,5 @@
+ node $pkg/scripts/generateTypeDefinitions.js > $pkg/src/types/nodes.js
+ node $pkg/scripts/generateNodeUtils.js > $pkg/src/nodes.js
+ 
+-npx prettier --write $pkg/src/types/nodes.js
+-npx prettier --write $pkg/src/nodes.js
++#npx prettier --write $pkg/src/types/nodes.js
++#npx prettier --write $pkg/src/nodes.js

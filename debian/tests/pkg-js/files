@@ -1,0 +1,3 @@
+debian/tests/tests_excluded
+packages/*/package.json
+packages/*/test

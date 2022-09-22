@@ -1,0 +1,19 @@
+Description: Use babeljs command i.e. system's babel to build.
+--- a/scripts/build.sh
++++ b/scripts/build.sh
+@@ -23,13 +23,13 @@
+   rm -rf "${D}/lib"
+ 
+   # Build CJS
+-  ./node_modules/.bin/babel "${D}/src" \
++  babeljs "${D}/src" \
+     --out-dir "${D}/lib" \
+     --ignore packages/dce/src/libwabt.js \
+     $OPTS &
+ 
+   # Build ESM
+-  ESM=1 ./node_modules/.bin/babel "${D}/src" \
++  ESM=1 babeljs "${D}/src" \
+     --out-dir "${D}/esm" \
+     --ignore packages/dce/src/libwabt.js \
+     $OPTS &

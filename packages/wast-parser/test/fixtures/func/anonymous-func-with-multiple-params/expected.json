@@ -1,0 +1,122 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "Func",
+      "name": {
+        "type": "Identifier",
+        "value": "func_0",
+        "raw": ""
+      },
+      "signature": {
+        "type": "Signature",
+        "params": [
+          {
+            "valtype": "i32"
+          },
+          {
+            "valtype": "i64"
+          },
+          {
+            "valtype": "i32"
+          }
+        ],
+        "results": []
+      },
+      "body": [],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 2
+        },
+        "end": {
+          "line": 1,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": "Func",
+      "name": {
+        "type": "Identifier",
+        "value": "func_1",
+        "raw": ""
+      },
+      "signature": {
+        "type": "Signature",
+        "params": [
+          {
+            "valtype": "f64"
+          },
+          {
+            "valtype": "i32"
+          }
+        ],
+        "results": []
+      },
+      "body": [],
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 1
+        },
+        "end": {
+          "line": 2,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": "Func",
+      "name": {
+        "type": "Identifier",
+        "value": "func_2",
+        "raw": ""
+      },
+      "signature": {
+        "type": "Signature",
+        "params": [
+          {
+            "valtype": "f64"
+          },
+          {
+            "valtype": "f64"
+          },
+          {
+            "valtype": "f64"
+          },
+          {
+            "valtype": "f64"
+          },
+          {
+            "valtype": "f32"
+          },
+          {
+            "valtype": "f32"
+          },
+          {
+            "valtype": "f32"
+          },
+          {
+            "valtype": "i32"
+          },
+          {
+            "valtype": "i64"
+          }
+        ],
+        "results": []
+      },
+      "body": [],
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 1
+        },
+        "end": {
+          "line": 3,
+          "column": 48
+        }
+      }
+    }
+  ]
+}

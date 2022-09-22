@@ -1,0 +1,7 @@
+it("should use child instructions as arguments", () => {
+  return WebAssembly.instantiate(wasmmodule).then(m => {
+    const res = m.instance.exports.add1(1);
+
+    assert.equal(res, 2);
+  });
+});

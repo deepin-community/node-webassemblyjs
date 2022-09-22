@@ -1,0 +1,52 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "Func",
+      "name": {
+        "type": "Identifier",
+        "value": "func_0",
+        "raw": ""
+      },
+      "signature": {
+        "type": "Signature",
+        "params": [],
+        "results": []
+      },
+      "body": [
+        {
+          "type": "Instr",
+          "id": "const",
+          "args": [
+            {
+              "type": "FloatLiteral",
+              "value": 99.99999999999999,
+              "raw": "99.99999999999999"
+            }
+          ],
+          "object": "f32",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 3
+            },
+            "end": {
+              "line": 2,
+              "column": 29
+            }
+          }
+        }
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 2
+        },
+        "end": {
+          "line": 3,
+          "column": -1
+        }
+      }
+    }
+  ]
+}

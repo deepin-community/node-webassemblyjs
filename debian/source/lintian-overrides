@@ -1,0 +1,36 @@
+# false positive
+source-is-missing xtuclong/src/long.js
+source-contains-prebuilt-javascript-object *
+very-long-line-length-in-source-file *
+
+# Test data unused
+source-contains-prebuilt-wasm-binary packages/eslint/test/addTwo.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/atomic/load/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/atomic/shared-memory/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/block/empty/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/block/with-instructions/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/block/with-label/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/block/with-result/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/br_if/basic/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/br_table/basic/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/call/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/call_indirect/no-args/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/call_indirect/with-params/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/call_indirect/with-return/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/func/anonymous-empty-func/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/func/anonymous-func-with-body/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/func/anonymous-func-with-multiple-params/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/func/anonymous-func-with-param/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/func/anonymous-func-with-params-and-result/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/func/anonymous-func-with-result/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/func/named-empty-func/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/func/named-func-with-multiple-instructions-and-multiple-params/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/module-export/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/producer-name-custom-section/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/producers-section/actual.wasm
+source-contains-prebuilt-wasm-binary packages/wasm-parser/test/fixtures/v128-type/actual.wasm
+source-contains-prebuilt-wasm-binary packages/webassemblyjs/test/compile/fixtures/compiled-module/module.wasm
+source-contains-prebuilt-wasm-binary packages/webassemblyjs/test/compile/fixtures/valide-module/module.wasm
+source-contains-prebuilt-wasm-binary packages/webassemblyjs/test/fixtures/wasm-import-memory/module.wasm
+source-contains-prebuilt-wasm-binary packages/webassemblyjs/test/fixtures/wasm-import-table/module.wasm
+source-contains-prebuilt-wasm-binary packages/webassemblyjs/test/fixtures/wasm-instantiate-module-with-func/module.wasm

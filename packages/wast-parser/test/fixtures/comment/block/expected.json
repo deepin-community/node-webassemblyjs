@@ -1,0 +1,61 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "BlockComment",
+      "value": "a",
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 1
+        },
+        "end": {
+          "line": 3,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "BlockComment",
+      "value": "",
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 4
+        },
+        "end": {
+          "line": 8,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "BlockComment",
+      "value": "\na\nb\nc\n",
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": -4
+        },
+        "end": {
+          "line": 12,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "BlockComment",
+      "value": "\n)\n(;\n",
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": -3
+        },
+        "end": {
+          "line": 12,
+          "column": 3
+        }
+      }
+    }
+  ]
+}

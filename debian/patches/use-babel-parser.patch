@@ -1,0 +1,10 @@
+babylon is now @babel/parser
+
+--- a/babel-plugin-mamacro/index.js
++++ b/babel-plugin-mamacro/index.js
+@@ -1,4 +1,4 @@
+-const {parse} = require("babylon");
++const {parse} = require("@babel/parser");
+ const generate = require("@babel/generator").default;
+ 
+ const parserOptions = {

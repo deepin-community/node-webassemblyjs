@@ -1,0 +1,203 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "IfInstruction",
+      "id": "if",
+      "testLabel": {
+        "type": "Identifier",
+        "value": "if_0",
+        "raw": ""
+      },
+      "test": [
+        {
+          "type": "Instr",
+          "id": "get_local",
+          "args": [
+            {
+              "type": "NumberLiteral",
+              "value": 0,
+              "raw": "0"
+            }
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 16
+            }
+          }
+        }
+      ],
+      "result": null,
+      "consequent": [],
+      "alternate": [],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 2
+        },
+        "end": {
+          "line": 1,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": "IfInstruction",
+      "id": "if",
+      "testLabel": {
+        "type": "Identifier",
+        "value": "if_1",
+        "raw": ""
+      },
+      "test": [
+        {
+          "type": "Instr",
+          "id": "get_local",
+          "args": [
+            {
+              "type": "NumberLiteral",
+              "value": 0,
+              "raw": "0"
+            }
+          ],
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 5
+            },
+            "end": {
+              "line": 2,
+              "column": 15
+            }
+          }
+        }
+      ],
+      "result": null,
+      "consequent": [],
+      "alternate": [],
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 1
+        },
+        "end": {
+          "line": 2,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": "IfInstruction",
+      "id": "if",
+      "testLabel": {
+        "type": "Identifier",
+        "value": "l",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 4
+          },
+          "end": {
+            "line": 3,
+            "column": 6
+          }
+        }
+      },
+      "test": [
+        {
+          "type": "Instr",
+          "id": "get_local",
+          "args": [
+            {
+              "type": "NumberLiteral",
+              "value": 0,
+              "raw": "0"
+            }
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 8
+            },
+            "end": {
+              "line": 3,
+              "column": 18
+            }
+          }
+        }
+      ],
+      "result": null,
+      "consequent": [],
+      "alternate": [],
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 1
+        },
+        "end": {
+          "line": 3,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": "IfInstruction",
+      "id": "if",
+      "testLabel": {
+        "type": "Identifier",
+        "value": "l",
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 4
+          },
+          "end": {
+            "line": 4,
+            "column": 6
+          }
+        }
+      },
+      "test": [
+        {
+          "type": "Instr",
+          "id": "get_local",
+          "args": [
+            {
+              "type": "NumberLiteral",
+              "value": 0,
+              "raw": "0"
+            }
+          ],
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 8
+            },
+            "end": {
+              "line": 4,
+              "column": 18
+            }
+          }
+        }
+      ],
+      "result": null,
+      "consequent": [],
+      "alternate": [],
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 1
+        },
+        "end": {
+          "line": 4,
+          "column": 33
+        }
+      }
+    }
+  ]
+}

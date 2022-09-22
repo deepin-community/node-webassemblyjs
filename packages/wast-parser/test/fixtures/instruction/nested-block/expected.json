@@ -1,0 +1,116 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "Func",
+      "name": {
+        "type": "Identifier",
+        "value": "func_0",
+        "raw": ""
+      },
+      "signature": {
+        "type": "Signature",
+        "params": [],
+        "results": []
+      },
+      "body": [
+        {
+          "type": "BlockInstruction",
+          "id": "block",
+          "label": {
+            "type": "Identifier",
+            "value": "block_0",
+            "raw": ""
+          },
+          "instr": [
+            {
+              "type": "CallInstruction",
+              "id": "call",
+              "index": {
+                "type": "Identifier",
+                "value": "dummy",
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 9
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 15
+                  }
+                }
+              }
+            },
+            {
+              "type": "Instr",
+              "id": "const",
+              "args": [
+                {
+                  "type": "NumberLiteral",
+                  "value": 150,
+                  "raw": "150"
+                }
+              ],
+              "object": "i32",
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 4
+                },
+                "end": {
+                  "line": 4,
+                  "column": 16
+                }
+              }
+            },
+            {
+              "type": "BlockInstruction",
+              "id": "block",
+              "label": {
+                "type": "Identifier",
+                "value": "block_1",
+                "raw": ""
+              },
+              "instr": [
+                {
+                  "type": "Instr",
+                  "id": "const",
+                  "args": [
+                    {
+                      "type": "NumberLiteral",
+                      "value": 150,
+                      "raw": "150"
+                    }
+                  ],
+                  "object": "i32",
+                  "loc": {
+                    "start": {
+                      "line": 6,
+                      "column": 6
+                    },
+                    "end": {
+                      "line": 6,
+                      "column": 18
+                    }
+                  }
+                }
+              ],
+              "result": null
+            }
+          ],
+          "result": null
+        }
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 2
+        },
+        "end": {
+          "line": 9,
+          "column": -1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "Global",
+      "globalType": {
+        "type": "GlobalType",
+        "valtype": "i32",
+        "mutability": "const"
+      },
+      "init": [
+        {
+          "type": "Instr",
+          "id": "const",
+          "args": [
+            {
+              "type": "NumberLiteral",
+              "value": 0,
+              "raw": "0"
+            }
+          ],
+          "object": "i32",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 20
+            },
+            "end": {
+              "line": 1,
+              "column": 30
+            }
+          }
+        }
+      ],
+      "name": {
+        "type": "Identifier",
+        "value": "test",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 9
+          },
+          "end": {
+            "line": 1,
+            "column": 14
+          }
+        }
+      },
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 2
+        },
+        "end": {
+          "line": 1,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": "Global",
+      "globalType": {
+        "type": "GlobalType",
+        "valtype": "i32",
+        "mutability": "const"
+      },
+      "init": [
+        {
+          "type": "Instr",
+          "id": "const",
+          "args": [
+            {
+              "type": "NumberLiteral",
+              "value": 1,
+              "raw": "1"
+            }
+          ],
+          "object": "i32",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 13
+            },
+            "end": {
+              "line": 2,
+              "column": 23
+            }
+          }
+        }
+      ],
+      "name": {
+        "type": "Identifier",
+        "value": "global_1",
+        "raw": ""
+      },
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 1
+        },
+        "end": {
+          "line": 2,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": "Global",
+      "globalType": {
+        "type": "GlobalType",
+        "valtype": "i32",
+        "mutability": "var"
+      },
+      "init": [
+        {
+          "type": "Instr",
+          "id": "const",
+          "args": [
+            {
+              "type": "NumberLiteral",
+              "value": 1,
+              "raw": "1"
+            }
+          ],
+          "object": "i32",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 19
+            },
+            "end": {
+              "line": 3,
+              "column": 29
+            }
+          }
+        }
+      ],
+      "name": {
+        "type": "Identifier",
+        "value": "global_2",
+        "raw": ""
+      },
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 1
+        },
+        "end": {
+          "line": 3,
+          "column": 30
+        }
+      }
+    }
+  ]
+}

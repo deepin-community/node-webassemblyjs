@@ -1,0 +1,32 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+WEBASSPATH=debian/node-webassemblyjs/usr/share/nodejs/@webassemblyjs
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	DISABLE_FUZZER_TEST=1 ./scripts/build.sh
+
+override_dh_auto_install:
+	dh_auto_install --buildsystem=nodejs
+	rm -rf $(WEBASSPATH)/*/src \
+		debian/node-webassemblyjs/usr/share/nodejs/wast-loader/src \
+		debian/node-webassemblyjs/usr/share/nodejs/webassemblyjs/src \
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod +x \
+		$(WEBASSPATH)/cli/*/*.js \
+		$(WEBASSPATH)/helper-testsuite-runner/*/cli.js \
+		$(WEBASSPATH)/repl/*/bin.js \
+		$(WEBASSPATH)/wasm-text-gen/*/cli.js \
+		$(WEBASSPATH)/wast-refmt/*/cli.js
+
+override_dh_auto_clean:
+	dh_auto_clean --buildsystem=nodejs
+	make clean-all

@@ -1,0 +1,90 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "Global",
+      "globalType": {
+        "type": "GlobalType",
+        "valtype": "i32",
+        "mutability": "const"
+      },
+      "init": [
+        {
+          "type": "Instr",
+          "id": "const",
+          "args": [
+            {
+              "type": "NumberLiteral",
+              "value": 1,
+              "raw": "1"
+            }
+          ],
+          "object": "i32",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 14
+            },
+            "end": {
+              "line": 1,
+              "column": 24
+            }
+          }
+        }
+      ],
+      "name": {
+        "type": "Identifier",
+        "value": "global_0",
+        "raw": ""
+      },
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 2
+        },
+        "end": {
+          "line": 1,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": "Data",
+      "memoryIndex": {
+        "type": "NumberLiteral",
+        "value": 0,
+        "raw": "0"
+      },
+      "offset": {
+        "type": "Instr",
+        "id": "get_global",
+        "args": [
+          {
+            "type": "NumberLiteral",
+            "value": 0,
+            "raw": "0"
+          }
+        ]
+      },
+      "init": {
+        "type": "ByteArray",
+        "values": [
+          97,
+          98,
+          99,
+          0
+        ]
+      },
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 1
+        },
+        "end": {
+          "line": 2,
+          "column": 28
+        }
+      }
+    }
+  ]
+}

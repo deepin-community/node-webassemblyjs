@@ -1,0 +1,52 @@
+version=4
+opts=\
+dversionmangle=auto,repack,compression=xz,repacksuffix=+dfsg,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-webassemblyjs-ast-$1/ \
+ https://github.com/xtuc/webassemblyjs/tags .*/archive/.*/v?([\d\.]+).tar.gz group
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=babel-plugin-mamacro" \
+ https://registry.npmjs.org/babel-plugin-mamacro \
+ https://registry.npmjs.org/babel-plugin-mamacro/-/babel-plugin-mamacro-(\d[\d\.]*)@ARCHIVE_EXT@ checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,ctype=nodejs,component=xtuclong,pgpmode=none" \
+ https://registry.npmjs.org/@xtuc/long https://registry.npmjs.org/@xtuc/long/-/long-(4(?:.[\d\.]+)?)@ARCHIVE_EXT@ checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,ctype=nodejs,component=xtucieee754,pgpmode=none" \
+ https://registry.npmjs.org/@xtuc/ieee754 https://registry.npmjs.org/@xtuc/ieee754/-/ieee754-(1(?:.[\d\.]+)?)@ARCHIVE_EXT@ checksum
+
+opts=\
+ctype=nodejs,\
+component=is-regex,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-is-regex-$1/ \
+ https://github.com/ljharb/is-regex/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum
+
+opts=\
+ctype=nodejs,\
+component=arrayprototypeflatmap,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-Array.prototype.flatMap-$1/ \
+ https://github.com/es-shims/Array.prototype.flatMap/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,ctype=nodejs,component=requireindex,pgpmode=none" \
+ https://registry.npmjs.org/requireindex https://registry.npmjs.org/requireindex/-/requireindex-([\d\.]+)@ARCHIVE_EXT@ checksum
+
+opts=\
+ctype=nodejs,\
+component=call-bind,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-call-bind-$1/ \
+ https://github.com/ljharb/call-bind/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum
+
+opts=\
+ctype=nodejs,\
+component=get-intrinsic,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-get-intrinsic-$1/ \
+ https://github.com/ljharb/get-intrinsic/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum

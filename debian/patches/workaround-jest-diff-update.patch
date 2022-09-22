@@ -1,0 +1,37 @@
+Description: workaround jest-diff updtae (named exports)
+Author: Yadd <yadd@debian.org>
+Forwarded: no
+Last-Update: 2021-10-24
+
+--- a/packages/helper-buffer/src/compare.js
++++ b/packages/helper-buffer/src/compare.js
+@@ -1,6 +1,6 @@
+ // this are dev dependencies
+ const diff = require("jest-diff");
+-const { NO_DIFF_MESSAGE } = require("jest-diff/build/constants");
++const { NO_DIFF_MESSAGE } = require("/usr/share/nodejs/jest-diff/build/constants");
+ const { decode } = require("@webassemblyjs/wasm-parser");
+ 
+ const oldConsoleLog = console.log;
+--- a/packages/helper-code-frame/test/index.js
++++ b/packages/helper-code-frame/test/index.js
+@@ -2,7 +2,7 @@
+ const t = require("@webassemblyjs/ast");
+ 
+ const diff = require("jest-diff");
+-const { NO_DIFF_MESSAGE } = require("jest-diff/build/constants");
++const { NO_DIFF_MESSAGE } = require("/usr/share/nodejs/jest-diff/build/constants");
+ 
+ const codeFrame = require("../lib").codeFrameFromAst;
+ 
+--- a/packages/helper-test-framework/src/index.js
++++ b/packages/helper-test-framework/src/index.js
+@@ -5,7 +5,7 @@
+ const { join, dirname } = require("path");
+ const { assert } = require("chai");
+ const diff = require("jest-diff");
+-const { NO_DIFF_MESSAGE } = require("jest-diff/build/constants");
++const { NO_DIFF_MESSAGE } = require("/usr/share/nodejs/jest-diff/build/constants");
+ 
+ const THROWS_TXT = "throws.txt";
+ const NOOP_FN = () => "";

@@ -1,0 +1,61 @@
+Source: node-webassemblyjs
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Testsuite: autopkgtest-pkg-nodejs
+Build-Depends:
+ debhelper-compat (= 13)
+ , chai <!nocheck>
+ , dh-sequence-nodejs
+ , eslint <!nocheck>
+ , jest <!nocheck>
+ , mocha <!nocheck>
+ , node-babel7
+ , node-define-properties
+ , node-es-abstract (>= 1.18.0~)
+ , node-function-bind
+ , node-object-inspect
+ , node-debbundle-es-to-primitive
+Standards-Version: 4.6.0
+Homepage: https://github.com/xtuc/webassemblyjs
+Vcs-Git: https://salsa.debian.org/js-team/node-webassemblyjs.git
+Vcs-Browser: https://salsa.debian.org/js-team/node-webassemblyjs
+Rules-Requires-Root: no
+
+Package: node-webassemblyjs
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , node-es-abstract (>= 1.18.0~)
+ , nodejs (>= 6)
+Provides: ${nodejs:Provides}
+Multi-Arch: foreign
+Description: Toolchain for WebAssembly
+ This package includes:
+ webassemblyjs - WebAssembly interpreter, implements the W3C WebAssembly API.
+ and the following modules under @webassembly name space.
+ .
+ ast - AST utils for webassemblyjs
+ cli - Toolbox for WebAssembly
+ dce - Eliminate unused functions in your WASM binary
+ eslint-plugin-webassembly - ESLint plugin for WebAssembly.
+ floating-point-hex-parser - Parser function for floating point hexadecimals.
+ helper-buffer - Buffer manipulation helpers
+ helper-fsm - FSM implementation
+ helper-wasm-bytecode - Constants for the wasm format
+ helper-wasm-section - Section manipulation helpers
+ leb128 - LEB128 decoding
+ repl - WebAssembly REPL.
+ validation - Module AST validations
+ wasm-edit - Replace in-place an AST node in the binary.
+ wasm-gen - WebAssembly binary format printer
+ wasm-opt - WASM optimizer
+ wasm-parser - WebAssembly binary format parser
+ wasm-strip - Strips custom sections (deprecated, use wabt instead)
+ wast-loader - Webpack loader for WebAssembly text format
+ wast-parser - WebAssembly text format parser
+ wast-printer - WebAssembly text format printer
+ wast-refmt - WAST refmt
+ .
+ Node.js is an event-based server-side JavaScript engine.

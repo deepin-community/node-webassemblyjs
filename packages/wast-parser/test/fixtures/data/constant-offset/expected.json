@@ -1,0 +1,43 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "Data",
+      "memoryIndex": {
+        "type": "NumberLiteral",
+        "value": 0,
+        "raw": "0"
+      },
+      "offset": {
+        "type": "Instr",
+        "id": "const",
+        "args": [
+          {
+            "type": "NumberLiteral",
+            "value": 25,
+            "raw": "25"
+          }
+        ],
+        "object": "i32"
+      },
+      "init": {
+        "type": "ByteArray",
+        "values": [
+          97,
+          98,
+          99
+        ]
+      },
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 2
+        },
+        "end": {
+          "line": 1,
+          "column": 26
+        }
+      }
+    }
+  ]
+}
