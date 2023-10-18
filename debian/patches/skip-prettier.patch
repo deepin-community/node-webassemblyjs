@@ -1,4 +1,5 @@
 Description: Skip prettier-command for build.
+Forwarded: not-needed
 --- a/scripts/generate-ast-utils.sh
 +++ b/scripts/generate-ast-utils.sh
 @@ -5,5 +5,5 @@

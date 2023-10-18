@@ -1,36 +1,40 @@
 Source: node-webassemblyjs
-Section: javascript
-Priority: optional
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Uploaders: Pirate Praveen <praveen@debian.org>
+Section: javascript
 Testsuite: autopkgtest-pkg-nodejs
-Build-Depends:
- debhelper-compat (= 13)
- , chai <!nocheck>
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
  , dh-sequence-nodejs
+ , chai <!nocheck>
  , eslint <!nocheck>
  , jest <!nocheck>
  , mocha <!nocheck>
  , node-babel7
- , node-define-properties
- , node-es-abstract (>= 1.18.0~)
- , node-function-bind
- , node-object-inspect
  , node-debbundle-es-to-primitive
-Standards-Version: 4.6.0
-Homepage: https://github.com/xtuc/webassemblyjs
-Vcs-Git: https://salsa.debian.org/js-team/node-webassemblyjs.git
+ , node-define-properties
+ , node-es-abstract
+ , node-function-bind
+ , node-glob
+ , node-object-inspect
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-webassemblyjs
+Vcs-Git: https://salsa.debian.org/js-team/node-webassemblyjs.git
+Homepage: https://github.com/xtuc/webassemblyjs
 Rules-Requires-Root: no
 
 Package: node-webassemblyjs
 Architecture: all
-Depends:
- ${misc:Depends}
- , node-es-abstract (>= 1.18.0~)
- , nodejs (>= 6)
-Provides: ${nodejs:Provides}
 Multi-Arch: foreign
+Depends: node-es-abstract
+ , node-glob
+ , ${misc:Depends}
+Suggests: chai
+ , node-babel7
+ , node-estraverse
+ , node-glob
+ , node-jest-diff
+Provides: ${nodejs:Provides}
 Description: Toolchain for WebAssembly
  This package includes:
  webassemblyjs - WebAssembly interpreter, implements the W3C WebAssembly API.
