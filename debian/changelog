@@ -1,3 +1,24 @@
+node-webassemblyjs (1.11.4+dfsg+~cs10.11.17-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix autopkgtest
+
+ -- Yadd <yadd@debian.org>  Thu, 28 Jul 2022 21:10:47 +0200
+
+node-webassemblyjs (1.11.4+dfsg+~cs10.11.17-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.6.1
+  * Drop nodejs dependency
+  * New upstream version 1.11.4+dfsg+~cs10.11.17
+  * Patches:
+    + Drop rename-babelrc.patch, now included in upstream
+    + Drop workaround-jest-diff-update.patch not needed with jest >= 28
+    + Refresh others
+  * Update copyright
+
+ -- Yadd <yadd@debian.org>  Thu, 28 Jul 2022 20:27:54 +0200
+
 node-webassemblyjs (1.11.1+dfsg+~cs10.10.21-1) unstable; urgency=medium
 
   * Team upload

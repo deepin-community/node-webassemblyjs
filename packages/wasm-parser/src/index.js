@@ -11,7 +11,7 @@ const defaultDecoderOpts = {
   dump: false,
   ignoreCodeSection: false,
   ignoreDataSection: false,
-  ignoreCustomNameSection: false
+  ignoreCustomNameSection: false,
 };
 
 // traverses the AST, locating function name metadata, which is then
@@ -23,9 +23,9 @@ function restoreFunctionNames(ast) {
     FunctionNameMetadata({ node }) {
       functionNames.push({
         name: node.value,
-        index: node.index
+        index: node.index,
       });
-    }
+    },
   });
 
   if (functionNames.length === 0) {
@@ -38,11 +38,12 @@ function restoreFunctionNames(ast) {
       const nodeName: Identifier = node.name;
       const indexBasedFunctionName = nodeName.value;
       const index = Number(indexBasedFunctionName.replace("func_", ""));
-      const functionName = functionNames.find(f => f.index === index);
+      const functionName = functionNames.find((f) => f.index === index);
       if (functionName) {
         const oldValue = nodeName.value;
 
         nodeName.value = functionName.name;
+        // $FlowIgnore
         nodeName.numeric = oldValue;
 
         // $FlowIgnore
@@ -56,7 +57,7 @@ function restoreFunctionNames(ast) {
         // $FlowIgnore
         const nodeName: NumberLiteral = node.descr.id;
         const index = nodeName.value;
-        const functionName = functionNames.find(f => f.index === index);
+        const functionName = functionNames.find((f) => f.index === index);
 
         if (functionName) {
           node.descr.id = t.identifier(functionName.name);
@@ -69,7 +70,7 @@ function restoreFunctionNames(ast) {
         // $FlowIgnore
         const indexBasedFunctionName: string = node.descr.id;
         const index = Number(indexBasedFunctionName.replace("func_", ""));
-        const functionName = functionNames.find(f => f.index === index);
+        const functionName = functionNames.find((f) => f.index === index);
 
         if (functionName) {
           // $FlowIgnore
@@ -81,7 +82,7 @@ function restoreFunctionNames(ast) {
     CallInstruction(nodePath: NodePath<CallInstruction>) {
       const node = nodePath.node;
       const index = node.index.value;
-      const functionName = functionNames.find(f => f.index === index);
+      const functionName = functionNames.find((f) => f.index === index);
       if (functionName) {
         const oldValue = node.index;
 
@@ -91,7 +92,7 @@ function restoreFunctionNames(ast) {
         // $FlowIgnore
         delete node.raw;
       }
-    }
+    },
   });
 }
 
@@ -103,9 +104,9 @@ function restoreLocalNames(ast) {
       localNames.push({
         name: node.value,
         localIndex: node.localIndex,
-        functionIndex: node.functionIndex
+        functionIndex: node.functionIndex,
       });
-    }
+    },
   });
 
   if (localNames.length === 0) {
@@ -125,13 +126,14 @@ function restoreLocalNames(ast) {
       const functionIndex = Number(indexBasedFunctionName.replace("func_", ""));
       signature.params.forEach((param, paramIndex) => {
         const paramName = localNames.find(
-          f => f.localIndex === paramIndex && f.functionIndex === functionIndex
+          (f) =>
+            f.localIndex === paramIndex && f.functionIndex === functionIndex
         );
         if (paramName && paramName.name !== "") {
           param.id = paramName.name;
         }
       });
-    }
+    },
   });
 }
 
@@ -149,9 +151,9 @@ function restoreModuleName(ast) {
           }
 
           node.id = name;
-        }
+        },
       });
-    }
+    },
   });
 }
 

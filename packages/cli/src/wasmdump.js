@@ -14,11 +14,15 @@ if (typeof filename === "undefined") {
 }
 
 const decoderOpts = {
-  dump: true
+  dump: true,
 };
 
 if (process.argv.indexOf("--ignore-code-section") !== -1) {
   decoderOpts.ignoreCodeSection = true;
+}
+
+if (process.argv.indexOf("--error-on-unknown-section") !== -1) {
+  decoderOpts.errorOnUnknownSection = true;
 }
 
 // $FlowIgnore: this is correct but not correctly documented

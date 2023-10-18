@@ -1,4 +1,5 @@
-babylon is now @babel/parser
+Description: babylon is now @babel/parser
+Forwarded: not-needed
 
 --- a/babel-plugin-mamacro/index.js
 +++ b/babel-plugin-mamacro/index.js

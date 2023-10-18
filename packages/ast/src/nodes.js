@@ -30,7 +30,7 @@ export function module(
   const node: Module = {
     type: "Module",
     id,
-    fields
+    fields,
   };
 
   if (typeof metadata !== "undefined") {
@@ -71,7 +71,7 @@ export function moduleMetadata(
 
   const node: ModuleMetadata = {
     type: "ModuleMetadata",
-    sections
+    sections,
   };
 
   if (typeof functionNames !== "undefined" && functionNames.length > 0) {
@@ -97,7 +97,7 @@ export function moduleNameMetadata(value: string): ModuleNameMetadata {
 
   const node: ModuleNameMetadata = {
     type: "ModuleNameMetadata",
-    value
+    value,
   };
 
   return node;
@@ -119,7 +119,7 @@ export function functionNameMetadata(
   const node: FunctionNameMetadata = {
     type: "FunctionNameMetadata",
     value,
-    index
+    index,
   };
 
   return node;
@@ -148,7 +148,7 @@ export function localNameMetadata(
     type: "LocalNameMetadata",
     value,
     localIndex,
-    functionIndex
+    functionIndex,
   };
 
   return node;
@@ -167,7 +167,7 @@ export function binaryModule(id: ?string, blob: Array<string>): BinaryModule {
   const node: BinaryModule = {
     type: "BinaryModule",
     id,
-    blob
+    blob,
   };
 
   return node;
@@ -186,7 +186,7 @@ export function quoteModule(id: ?string, string: Array<string>): QuoteModule {
   const node: QuoteModule = {
     type: "QuoteModule",
     id,
-    string
+    string,
   };
 
   return node;
@@ -208,7 +208,7 @@ export function sectionMetadata(
     section,
     startOffset,
     size,
-    vectorOfSize
+    vectorOfSize,
   };
 
   return node;
@@ -223,7 +223,7 @@ export function producersSectionMetadata(
 
   const node: ProducersSectionMetadata = {
     type: "ProducersSectionMetadata",
-    producers
+    producers,
   };
 
   return node;
@@ -248,7 +248,7 @@ export function producerMetadata(
     type: "ProducerMetadata",
     language,
     processedBy,
-    sdk
+    sdk,
   };
 
   return node;
@@ -270,7 +270,7 @@ export function producerMetadataVersionedName(
   const node: ProducerMetadataVersionedName = {
     type: "ProducerMetadataVersionedName",
     name,
-    version
+    version,
   };
 
   return node;
@@ -288,7 +288,7 @@ export function loopInstruction(
     id: "loop",
     label,
     resulttype,
-    instr
+    instr,
   };
 
   return node;
@@ -310,7 +310,7 @@ export function instr(
   const node: Instr = {
     type: "Instr",
     id,
-    args
+    args,
   };
 
   if (typeof object !== "undefined") {
@@ -348,7 +348,7 @@ export function ifInstruction(
     test,
     result,
     consequent,
-    alternate
+    alternate,
   };
 
   return node;
@@ -362,7 +362,7 @@ export function stringLiteral(value: string): StringLiteral {
 
   const node: StringLiteral = {
     type: "StringLiteral",
-    value
+    value,
   };
 
   return node;
@@ -381,7 +381,7 @@ export function numberLiteral(value: number, raw: string): NumberLiteral {
   const node: NumberLiteral = {
     type: "NumberLiteral",
     value,
-    raw
+    raw,
   };
 
   return node;
@@ -399,7 +399,7 @@ export function longNumberLiteral(
   const node: LongNumberLiteral = {
     type: "LongNumberLiteral",
     value,
-    raw
+    raw,
   };
 
   return node;
@@ -438,7 +438,7 @@ export function floatLiteral(
   const node: FloatLiteral = {
     type: "FloatLiteral",
     value,
-    raw
+    raw,
   };
 
   if (nan === true) {
@@ -465,7 +465,7 @@ export function elem(
     type: "Elem",
     table,
     offset,
-    funcs
+    funcs,
   };
 
   return node;
@@ -474,7 +474,7 @@ export function elem(
 export function indexInFuncSection(index: Index): IndexInFuncSection {
   const node: IndexInFuncSection = {
     type: "IndexInFuncSection",
-    index
+    index,
   };
 
   return node;
@@ -483,7 +483,7 @@ export function indexInFuncSection(index: Index): IndexInFuncSection {
 export function valtypeLiteral(name: Valtype): ValtypeLiteral {
   const node: ValtypeLiteral = {
     type: "ValtypeLiteral",
-    name
+    name,
   };
 
   return node;
@@ -496,7 +496,7 @@ export function typeInstruction(
   const node: TypeInstruction = {
     type: "TypeInstruction",
     id,
-    functype
+    functype,
   };
 
   return node;
@@ -505,7 +505,7 @@ export function typeInstruction(
 export function start(index: Index): Start {
   const node: Start = {
     type: "Start",
-    index
+    index,
   };
 
   return node;
@@ -518,7 +518,7 @@ export function globalType(
   const node: GlobalType = {
     type: "GlobalType",
     valtype,
-    mutability
+    mutability,
   };
 
   return node;
@@ -532,7 +532,7 @@ export function leadingComment(value: string): LeadingComment {
 
   const node: LeadingComment = {
     type: "LeadingComment",
-    value
+    value,
   };
 
   return node;
@@ -546,7 +546,7 @@ export function blockComment(value: string): BlockComment {
 
   const node: BlockComment = {
     type: "BlockComment",
-    value
+    value,
   };
 
   return node;
@@ -561,7 +561,7 @@ export function data(
     type: "Data",
     memoryIndex,
     offset,
-    init
+    init,
   };
 
   return node;
@@ -578,7 +578,7 @@ export function global(
     type: "Global",
     globalType,
     init,
-    name
+    name,
   };
 
   return node;
@@ -605,7 +605,7 @@ export function table(
     type: "Table",
     elementType,
     limits,
-    name
+    name,
   };
 
   if (typeof elements !== "undefined" && elements.length > 0) {
@@ -619,7 +619,7 @@ export function memory(limits: Limit, id: ?Index): Memory {
   const node: Memory = {
     type: "Memory",
     limits,
-    id
+    id,
   };
 
   return node;
@@ -632,7 +632,7 @@ export function funcImportDescr(
   const node: FuncImportDescr = {
     type: "FuncImportDescr",
     id,
-    signature
+    signature,
   };
 
   return node;
@@ -656,7 +656,7 @@ export function moduleImport(
     type: "ModuleImport",
     module,
     name,
-    descr
+    descr,
   };
 
   return node;
@@ -669,7 +669,7 @@ export function moduleExportDescr(
   const node: ModuleExportDescr = {
     type: "ModuleExportDescr",
     exportType,
-    id
+    id,
   };
 
   return node;
@@ -687,7 +687,7 @@ export function moduleExport(
   const node: ModuleExport = {
     type: "ModuleExport",
     name,
-    descr
+    descr,
   };
 
   return node;
@@ -715,7 +715,7 @@ export function limit(min: number, max?: number, shared?: boolean): Limit {
 
   const node: Limit = {
     type: "Limit",
-    min
+    min,
   };
 
   if (typeof max !== "undefined") {
@@ -740,7 +740,7 @@ export function signature(
   const node: Signature = {
     type: "Signature",
     params,
-    results
+    results,
   };
 
   return node;
@@ -751,7 +751,7 @@ export function program(body: Array<Node>): Program {
 
   const node: Program = {
     type: "Program",
-    body
+    body,
   };
 
   return node;
@@ -772,7 +772,7 @@ export function identifier(value: string, raw?: string): Identifier {
 
   const node: Identifier = {
     type: "Identifier",
-    value
+    value,
   };
 
   if (typeof raw !== "undefined") {
@@ -794,7 +794,7 @@ export function blockInstruction(
     id: "block",
     label,
     instr,
-    result
+    result,
   };
 
   return node;
@@ -814,7 +814,7 @@ export function callInstruction(
   const node: CallInstruction = {
     type: "CallInstruction",
     id: "call",
-    index
+    index,
   };
 
   if (typeof instrArgs !== "undefined" && instrArgs.length > 0) {
@@ -839,7 +839,7 @@ export function callIndirectInstruction(
   const node: CallIndirectInstruction = {
     type: "CallIndirectInstruction",
     id: "call_indirect",
-    signature
+    signature,
   };
 
   if (typeof intrs !== "undefined" && intrs.length > 0) {
@@ -854,7 +854,7 @@ export function byteArray(values: Array<Byte>): ByteArray {
 
   const node: ByteArray = {
     type: "ByteArray",
-    values
+    values,
   };
 
   return node;
@@ -880,7 +880,7 @@ export function func(
     type: "Func",
     name,
     signature,
-    body
+    body,
   };
 
   if (isExternal === true) {
@@ -902,7 +902,7 @@ export function internalBrUnless(target: number): InternalBrUnless {
 
   const node: InternalBrUnless = {
     type: "InternalBrUnless",
-    target
+    target,
   };
 
   return node;
@@ -916,7 +916,7 @@ export function internalGoto(target: number): InternalGoto {
 
   const node: InternalGoto = {
     type: "InternalGoto",
-    target
+    target,
   };
 
   return node;
@@ -930,7 +930,7 @@ export function internalCallExtern(target: number): InternalCallExtern {
 
   const node: InternalCallExtern = {
     type: "InternalCallExtern",
-    target
+    target,
   };
 
   return node;
@@ -938,109 +938,134 @@ export function internalCallExtern(target: number): InternalCallExtern {
 
 export function internalEndAndReturn(): InternalEndAndReturn {
   const node: InternalEndAndReturn = {
-    type: "InternalEndAndReturn"
+    type: "InternalEndAndReturn",
   };
 
   return node;
 }
 
-export const isModule = isTypeOf("Module");
+export const isModule: (n: Node) => boolean = isTypeOf("Module");
 
-export const isModuleMetadata = isTypeOf("ModuleMetadata");
+export const isModuleMetadata: (n: Node) => boolean =
+  isTypeOf("ModuleMetadata");
 
-export const isModuleNameMetadata = isTypeOf("ModuleNameMetadata");
+export const isModuleNameMetadata: (n: Node) => boolean =
+  isTypeOf("ModuleNameMetadata");
 
-export const isFunctionNameMetadata = isTypeOf("FunctionNameMetadata");
+export const isFunctionNameMetadata: (n: Node) => boolean = isTypeOf(
+  "FunctionNameMetadata"
+);
 
-export const isLocalNameMetadata = isTypeOf("LocalNameMetadata");
+export const isLocalNameMetadata: (n: Node) => boolean =
+  isTypeOf("LocalNameMetadata");
 
-export const isBinaryModule = isTypeOf("BinaryModule");
+export const isBinaryModule: (n: Node) => boolean = isTypeOf("BinaryModule");
 
-export const isQuoteModule = isTypeOf("QuoteModule");
+export const isQuoteModule: (n: Node) => boolean = isTypeOf("QuoteModule");
 
-export const isSectionMetadata = isTypeOf("SectionMetadata");
+export const isSectionMetadata: (n: Node) => boolean =
+  isTypeOf("SectionMetadata");
 
-export const isProducersSectionMetadata = isTypeOf("ProducersSectionMetadata");
+export const isProducersSectionMetadata: (n: Node) => boolean = isTypeOf(
+  "ProducersSectionMetadata"
+);
 
-export const isProducerMetadata = isTypeOf("ProducerMetadata");
+export const isProducerMetadata: (n: Node) => boolean =
+  isTypeOf("ProducerMetadata");
 
-export const isProducerMetadataVersionedName = isTypeOf(
+export const isProducerMetadataVersionedName: (n: Node) => boolean = isTypeOf(
   "ProducerMetadataVersionedName"
 );
 
-export const isLoopInstruction = isTypeOf("LoopInstruction");
+export const isLoopInstruction: (n: Node) => boolean =
+  isTypeOf("LoopInstruction");
 
-export const isInstr = isTypeOf("Instr");
+export const isInstr: (n: Node) => boolean = isTypeOf("Instr");
 
-export const isIfInstruction = isTypeOf("IfInstruction");
+export const isIfInstruction: (n: Node) => boolean = isTypeOf("IfInstruction");
 
-export const isStringLiteral = isTypeOf("StringLiteral");
+export const isStringLiteral: (n: Node) => boolean = isTypeOf("StringLiteral");
 
-export const isNumberLiteral = isTypeOf("NumberLiteral");
+export const isNumberLiteral: (n: Node) => boolean = isTypeOf("NumberLiteral");
 
-export const isLongNumberLiteral = isTypeOf("LongNumberLiteral");
+export const isLongNumberLiteral: (n: Node) => boolean =
+  isTypeOf("LongNumberLiteral");
 
-export const isFloatLiteral = isTypeOf("FloatLiteral");
+export const isFloatLiteral: (n: Node) => boolean = isTypeOf("FloatLiteral");
 
-export const isElem = isTypeOf("Elem");
+export const isElem: (n: Node) => boolean = isTypeOf("Elem");
 
-export const isIndexInFuncSection = isTypeOf("IndexInFuncSection");
+export const isIndexInFuncSection: (n: Node) => boolean =
+  isTypeOf("IndexInFuncSection");
 
-export const isValtypeLiteral = isTypeOf("ValtypeLiteral");
+export const isValtypeLiteral: (n: Node) => boolean =
+  isTypeOf("ValtypeLiteral");
 
-export const isTypeInstruction = isTypeOf("TypeInstruction");
+export const isTypeInstruction: (n: Node) => boolean =
+  isTypeOf("TypeInstruction");
 
-export const isStart = isTypeOf("Start");
+export const isStart: (n: Node) => boolean = isTypeOf("Start");
 
-export const isGlobalType = isTypeOf("GlobalType");
+export const isGlobalType: (n: Node) => boolean = isTypeOf("GlobalType");
 
-export const isLeadingComment = isTypeOf("LeadingComment");
+export const isLeadingComment: (n: Node) => boolean =
+  isTypeOf("LeadingComment");
 
-export const isBlockComment = isTypeOf("BlockComment");
+export const isBlockComment: (n: Node) => boolean = isTypeOf("BlockComment");
 
-export const isData = isTypeOf("Data");
+export const isData: (n: Node) => boolean = isTypeOf("Data");
 
-export const isGlobal = isTypeOf("Global");
+export const isGlobal: (n: Node) => boolean = isTypeOf("Global");
 
-export const isTable = isTypeOf("Table");
+export const isTable: (n: Node) => boolean = isTypeOf("Table");
 
-export const isMemory = isTypeOf("Memory");
+export const isMemory: (n: Node) => boolean = isTypeOf("Memory");
 
-export const isFuncImportDescr = isTypeOf("FuncImportDescr");
+export const isFuncImportDescr: (n: Node) => boolean =
+  isTypeOf("FuncImportDescr");
 
-export const isModuleImport = isTypeOf("ModuleImport");
+export const isModuleImport: (n: Node) => boolean = isTypeOf("ModuleImport");
 
-export const isModuleExportDescr = isTypeOf("ModuleExportDescr");
+export const isModuleExportDescr: (n: Node) => boolean =
+  isTypeOf("ModuleExportDescr");
 
-export const isModuleExport = isTypeOf("ModuleExport");
+export const isModuleExport: (n: Node) => boolean = isTypeOf("ModuleExport");
 
-export const isLimit = isTypeOf("Limit");
+export const isLimit: (n: Node) => boolean = isTypeOf("Limit");
 
-export const isSignature = isTypeOf("Signature");
+export const isSignature: (n: Node) => boolean = isTypeOf("Signature");
 
-export const isProgram = isTypeOf("Program");
+export const isProgram: (n: Node) => boolean = isTypeOf("Program");
 
-export const isIdentifier = isTypeOf("Identifier");
+export const isIdentifier: (n: Node) => boolean = isTypeOf("Identifier");
 
-export const isBlockInstruction = isTypeOf("BlockInstruction");
+export const isBlockInstruction: (n: Node) => boolean =
+  isTypeOf("BlockInstruction");
 
-export const isCallInstruction = isTypeOf("CallInstruction");
+export const isCallInstruction: (n: Node) => boolean =
+  isTypeOf("CallInstruction");
 
-export const isCallIndirectInstruction = isTypeOf("CallIndirectInstruction");
+export const isCallIndirectInstruction: (n: Node) => boolean = isTypeOf(
+  "CallIndirectInstruction"
+);
 
-export const isByteArray = isTypeOf("ByteArray");
+export const isByteArray: (n: Node) => boolean = isTypeOf("ByteArray");
 
-export const isFunc = isTypeOf("Func");
+export const isFunc: (n: Node) => boolean = isTypeOf("Func");
 
-export const isInternalBrUnless = isTypeOf("InternalBrUnless");
+export const isInternalBrUnless: (n: Node) => boolean =
+  isTypeOf("InternalBrUnless");
 
-export const isInternalGoto = isTypeOf("InternalGoto");
+export const isInternalGoto: (n: Node) => boolean = isTypeOf("InternalGoto");
 
-export const isInternalCallExtern = isTypeOf("InternalCallExtern");
+export const isInternalCallExtern: (n: Node) => boolean =
+  isTypeOf("InternalCallExtern");
 
-export const isInternalEndAndReturn = isTypeOf("InternalEndAndReturn");
+export const isInternalEndAndReturn: (n: Node) => boolean = isTypeOf(
+  "InternalEndAndReturn"
+);
 
-export const isNode = (node: Node) =>
+export const isNode = (node: Node): boolean =>
   isModule(node) ||
   isModuleMetadata(node) ||
   isModuleNameMetadata(node) ||
@@ -1089,10 +1114,10 @@ export const isNode = (node: Node) =>
   isInternalCallExtern(node) ||
   isInternalEndAndReturn(node);
 
-export const isBlock = (node: Node) =>
+export const isBlock = (node: Node): boolean =>
   isLoopInstruction(node) || isBlockInstruction(node) || isFunc(node);
 
-export const isInstruction = (node: Node) =>
+export const isInstruction = (node: Node): boolean =>
   isLoopInstruction(node) ||
   isInstr(node) ||
   isIfInstruction(node) ||
@@ -1101,7 +1126,7 @@ export const isInstruction = (node: Node) =>
   isCallInstruction(node) ||
   isCallIndirectInstruction(node);
 
-export const isExpression = (node: Node) =>
+export const isExpression = (node: Node): boolean =>
   isInstr(node) ||
   isStringLiteral(node) ||
   isNumberLiteral(node) ||
@@ -1110,120 +1135,149 @@ export const isExpression = (node: Node) =>
   isValtypeLiteral(node) ||
   isIdentifier(node);
 
-export const isNumericLiteral = (node: Node) =>
+export const isNumericLiteral = (node: Node): boolean =>
   isNumberLiteral(node) || isLongNumberLiteral(node) || isFloatLiteral(node);
 
-export const isImportDescr = (node: Node) =>
+export const isImportDescr = (node: Node): boolean =>
   isGlobalType(node) ||
   isTable(node) ||
   isMemory(node) ||
   isFuncImportDescr(node);
 
-export const isIntrinsic = (node: Node) =>
+export const isIntrinsic = (node: Node): boolean =>
   isInternalBrUnless(node) ||
   isInternalGoto(node) ||
   isInternalCallExtern(node) ||
   isInternalEndAndReturn(node);
 
-export const assertModule = assertTypeOf("Module");
+export const assertModule: (n: Node) => void = assertTypeOf("Module");
 
-export const assertModuleMetadata = assertTypeOf("ModuleMetadata");
+export const assertModuleMetadata: (n: Node) => void =
+  assertTypeOf("ModuleMetadata");
 
-export const assertModuleNameMetadata = assertTypeOf("ModuleNameMetadata");
+export const assertModuleNameMetadata: (n: Node) => void =
+  assertTypeOf("ModuleNameMetadata");
 
-export const assertFunctionNameMetadata = assertTypeOf("FunctionNameMetadata");
+export const assertFunctionNameMetadata: (n: Node) => void = assertTypeOf(
+  "FunctionNameMetadata"
+);
 
-export const assertLocalNameMetadata = assertTypeOf("LocalNameMetadata");
+export const assertLocalNameMetadata: (n: Node) => void =
+  assertTypeOf("LocalNameMetadata");
 
-export const assertBinaryModule = assertTypeOf("BinaryModule");
+export const assertBinaryModule: (n: Node) => void =
+  assertTypeOf("BinaryModule");
 
-export const assertQuoteModule = assertTypeOf("QuoteModule");
+export const assertQuoteModule: (n: Node) => void = assertTypeOf("QuoteModule");
 
-export const assertSectionMetadata = assertTypeOf("SectionMetadata");
+export const assertSectionMetadata: (n: Node) => void =
+  assertTypeOf("SectionMetadata");
 
-export const assertProducersSectionMetadata = assertTypeOf(
+export const assertProducersSectionMetadata: (n: Node) => void = assertTypeOf(
   "ProducersSectionMetadata"
 );
 
-export const assertProducerMetadata = assertTypeOf("ProducerMetadata");
+export const assertProducerMetadata: (n: Node) => void =
+  assertTypeOf("ProducerMetadata");
 
-export const assertProducerMetadataVersionedName = assertTypeOf(
-  "ProducerMetadataVersionedName"
-);
+export const assertProducerMetadataVersionedName: (n: Node) => void =
+  assertTypeOf("ProducerMetadataVersionedName");
 
-export const assertLoopInstruction = assertTypeOf("LoopInstruction");
+export const assertLoopInstruction: (n: Node) => void =
+  assertTypeOf("LoopInstruction");
 
-export const assertInstr = assertTypeOf("Instr");
+export const assertInstr: (n: Node) => void = assertTypeOf("Instr");
 
-export const assertIfInstruction = assertTypeOf("IfInstruction");
+export const assertIfInstruction: (n: Node) => void =
+  assertTypeOf("IfInstruction");
 
-export const assertStringLiteral = assertTypeOf("StringLiteral");
+export const assertStringLiteral: (n: Node) => void =
+  assertTypeOf("StringLiteral");
 
-export const assertNumberLiteral = assertTypeOf("NumberLiteral");
+export const assertNumberLiteral: (n: Node) => void =
+  assertTypeOf("NumberLiteral");
 
-export const assertLongNumberLiteral = assertTypeOf("LongNumberLiteral");
+export const assertLongNumberLiteral: (n: Node) => void =
+  assertTypeOf("LongNumberLiteral");
 
-export const assertFloatLiteral = assertTypeOf("FloatLiteral");
+export const assertFloatLiteral: (n: Node) => void =
+  assertTypeOf("FloatLiteral");
 
-export const assertElem = assertTypeOf("Elem");
+export const assertElem: (n: Node) => void = assertTypeOf("Elem");
 
-export const assertIndexInFuncSection = assertTypeOf("IndexInFuncSection");
+export const assertIndexInFuncSection: (n: Node) => void =
+  assertTypeOf("IndexInFuncSection");
 
-export const assertValtypeLiteral = assertTypeOf("ValtypeLiteral");
+export const assertValtypeLiteral: (n: Node) => void =
+  assertTypeOf("ValtypeLiteral");
 
-export const assertTypeInstruction = assertTypeOf("TypeInstruction");
+export const assertTypeInstruction: (n: Node) => void =
+  assertTypeOf("TypeInstruction");
 
-export const assertStart = assertTypeOf("Start");
+export const assertStart: (n: Node) => void = assertTypeOf("Start");
 
-export const assertGlobalType = assertTypeOf("GlobalType");
+export const assertGlobalType: (n: Node) => void = assertTypeOf("GlobalType");
 
-export const assertLeadingComment = assertTypeOf("LeadingComment");
+export const assertLeadingComment: (n: Node) => void =
+  assertTypeOf("LeadingComment");
 
-export const assertBlockComment = assertTypeOf("BlockComment");
+export const assertBlockComment: (n: Node) => void =
+  assertTypeOf("BlockComment");
 
-export const assertData = assertTypeOf("Data");
+export const assertData: (n: Node) => void = assertTypeOf("Data");
 
-export const assertGlobal = assertTypeOf("Global");
+export const assertGlobal: (n: Node) => void = assertTypeOf("Global");
 
-export const assertTable = assertTypeOf("Table");
+export const assertTable: (n: Node) => void = assertTypeOf("Table");
 
-export const assertMemory = assertTypeOf("Memory");
+export const assertMemory: (n: Node) => void = assertTypeOf("Memory");
 
-export const assertFuncImportDescr = assertTypeOf("FuncImportDescr");
+export const assertFuncImportDescr: (n: Node) => void =
+  assertTypeOf("FuncImportDescr");
 
-export const assertModuleImport = assertTypeOf("ModuleImport");
+export const assertModuleImport: (n: Node) => void =
+  assertTypeOf("ModuleImport");
 
-export const assertModuleExportDescr = assertTypeOf("ModuleExportDescr");
+export const assertModuleExportDescr: (n: Node) => void =
+  assertTypeOf("ModuleExportDescr");
 
-export const assertModuleExport = assertTypeOf("ModuleExport");
+export const assertModuleExport: (n: Node) => void =
+  assertTypeOf("ModuleExport");
 
-export const assertLimit = assertTypeOf("Limit");
+export const assertLimit: (n: Node) => void = assertTypeOf("Limit");
 
-export const assertSignature = assertTypeOf("Signature");
+export const assertSignature: (n: Node) => void = assertTypeOf("Signature");
 
-export const assertProgram = assertTypeOf("Program");
+export const assertProgram: (n: Node) => void = assertTypeOf("Program");
 
-export const assertIdentifier = assertTypeOf("Identifier");
+export const assertIdentifier: (n: Node) => void = assertTypeOf("Identifier");
 
-export const assertBlockInstruction = assertTypeOf("BlockInstruction");
+export const assertBlockInstruction: (n: Node) => void =
+  assertTypeOf("BlockInstruction");
 
-export const assertCallInstruction = assertTypeOf("CallInstruction");
+export const assertCallInstruction: (n: Node) => void =
+  assertTypeOf("CallInstruction");
 
-export const assertCallIndirectInstruction = assertTypeOf(
+export const assertCallIndirectInstruction: (n: Node) => void = assertTypeOf(
   "CallIndirectInstruction"
 );
 
-export const assertByteArray = assertTypeOf("ByteArray");
+export const assertByteArray: (n: Node) => void = assertTypeOf("ByteArray");
 
-export const assertFunc = assertTypeOf("Func");
+export const assertFunc: (n: Node) => void = assertTypeOf("Func");
 
-export const assertInternalBrUnless = assertTypeOf("InternalBrUnless");
+export const assertInternalBrUnless: (n: Node) => void =
+  assertTypeOf("InternalBrUnless");
 
-export const assertInternalGoto = assertTypeOf("InternalGoto");
+export const assertInternalGoto: (n: Node) => void =
+  assertTypeOf("InternalGoto");
 
-export const assertInternalCallExtern = assertTypeOf("InternalCallExtern");
+export const assertInternalCallExtern: (n: Node) => void =
+  assertTypeOf("InternalCallExtern");
 
-export const assertInternalEndAndReturn = assertTypeOf("InternalEndAndReturn");
+export const assertInternalEndAndReturn: (n: Node) => void = assertTypeOf(
+  "InternalEndAndReturn"
+);
 
 export const unionTypesMap = {
   Module: ["Node"],
@@ -1272,7 +1326,7 @@ export const unionTypesMap = {
   InternalBrUnless: ["Node", "Intrinsic"],
   InternalGoto: ["Node", "Intrinsic"],
   InternalCallExtern: ["Node", "Intrinsic"],
-  InternalEndAndReturn: ["Node", "Intrinsic"]
+  InternalEndAndReturn: ["Node", "Intrinsic"],
 };
 
 export const nodeAndUnionTypes = [
@@ -1329,5 +1383,5 @@ export const nodeAndUnionTypes = [
   "Expression",
   "NumericLiteral",
   "ImportDescr",
-  "Intrinsic"
+  "Intrinsic",
 ];
